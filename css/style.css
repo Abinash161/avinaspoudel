@@ -1,0 +1,263 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.6;
+  color: #ffffff;
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar a {
+  color: #ffffff;
+  margin: 0 15px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar a.active,
+.navbar a:hover {
+  background: #ff6f61;
+  color: #ffffff;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, #ff6f61, #ff8a50);
+  color: #ffffff;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.hero .btn {
+  display: inline-block;
+  padding: 10px 25px;
+  background: #ffffff;
+  color: #ff6f61;
+  border-radius: 25px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.hero .btn:hover {
+  background: #ff8a50;
+  color: #ffffff;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* About Section */
+.about {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.about h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.8;
+}
+
+.about .profile-pic {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Skills Section */
+.skills {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #121212, #1e1e2f);
+  text-align: center;
+}
+
+.skills h2 {
+  font-size: 2.5rem;
+  color: #ff6f61;
+  margin-bottom: 30px;
+}
+
+.skill {
+  margin: 20px 0;
+}
+
+.skill h3 {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  height: 10px;
+  width: 80%;
+  background: #333;
+  border-radius: 5px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.progress-bar::before {
+  content: "";
+  display: block;
+  height: 100%;
+  background: #ff6f61;
+  width: 0%;
+  animation: fillBar 2s ease-in-out forwards;
+}
+
+@keyframes fillBar {
+  100% {
+    width: 100%;
+  }
+}
+
+/* Projects Section */
+.projects {
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.project-card {
+  background: #1e1e2f;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  background: #ff6f61;
+  color: #ffffff;
+  transform: translateY(-5px);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+}
+
+/* Contact Section */
+.contact {
+  padding: 80px 20px;
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #ff6f61;
+}
+
+.contact form {
+  display: grid;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.contact input,
+.contact textarea {
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #333;
+  border-radius: 5px;
+  outline: none;
+  background: #1e1e2f;
+  color: #ffffff;
+}
+
+.contact button {
+  padding: 10px 20px;
+  background: #ff6f61;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.contact button:hover {
+  background: #ff8a50;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  font-size: 0.9rem;
+}
+
+footer p {
+  margin: 0 auto;
+}
